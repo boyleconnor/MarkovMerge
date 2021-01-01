@@ -52,8 +52,8 @@ if __name__ == '__main__':
 
         elif command in {'t': 'text'}:
             sequence = model.random_sequence()
-            properties = model.get_properties(*sequence)
-            print(color.colored_text(sequence, properties['biases']))
+            biases = model.get_biases(*sequence)
+            print(color.colored_text(sequence, biases))
 
         elif command in {'quit', 'exit', 'q'}:
             break
